@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mine Master</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="icon" type="image/png" href="../static/images/icons/estrela.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        .fundo {
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 500px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #titulo{
+            text-align: center;
+            color: black;
+            font-size: 4rem;
+        }
+
+        #gerar_novo_campo{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="fundo">
+    <div class="container">
+        <h1 id="titulo">eCOgnitive</h1>
+        <div class="row justify-content-md-center">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div id="todas-telas">
+                        <table id="campo-minado" cellpadding="0" class="campo-minado">
+                            <tr>
+                                <td>
+                                    <div class="text-center">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <form method="POST" id="gerar_campo_form">
+                            <label class="estrelas">Quantidade de estrelas:</label>
+                            <select id="num_estrelas" name="num_estrelas">
+                                <option value="4">4 estrelas</option>
+                                <option value="5">5 estrelas</option>
+                            </select>
+                            <br>
+                            <button id="gerar_novo_campo" class="mt-5 mx-auto" type="submit" onclick="gerarCampo()">
+                                Hackear
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Elemento de loading -->
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+</script>
+<script src="https://kit.fontawesome.com/c8c11837ad.js" crossorigin="anonymous"></script>
+</body>
+</html>
