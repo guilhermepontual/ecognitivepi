@@ -7,7 +7,8 @@ response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
     data = response.json()
-    # Faça algo com os dados recebidos
-    print(data)
+    feeds = data["feeds"]
+    field1_values = [feed["field1"] for feed in feeds if feed["field1"] is not None]
+    print("Valores do field1:", field1_values)
 else:
     print("A requisição falhou com o código de status:", response.status_code)
